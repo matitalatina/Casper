@@ -1,54 +1,66 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    {{!-- Document Settings --}}
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    {{!-- Page Meta --}}
-    <title>{{meta_title}}</title>
-    <meta name="description" content="{{meta_description}}" />
-
-    {{!-- Mobile Meta --}}
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    {{!-- Brand icon --}}
-    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
-
-    {{!-- Styles'n'Scripts --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
-
-    {{!-- Ghost outputs important style and meta data with this tag --}}
-    {{ghost_head}}
+  {{!-- Document Settings --}}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  {{!-- Page Meta --}}
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}" />
+  {{!-- Mobile Meta --}}
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{!-- Brand icon --}}
+  <link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
+  <link rel="apple-touch-icon" sizes="57x57" href="{{asset "/apple-icon-57x57.png"}}">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{asset "/apple-icon-60x60.png"}}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{asset "/apple-icon-72x72.png"}}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{asset "/apple-icon-76x76.png"}}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{asset "/apple-icon-114x114.png"}}">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{asset "/apple-icon-120x120.png"}}">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{asset "/apple-icon-144x144.png"}}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{asset "/apple-icon-152x152.png"}}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{asset "/apple-icon-180x180.png"}}">
+  <link rel="icon" type="image/png" sizes="192x192"  href="{{asset "/android-icon-192x192.png"}}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{asset "/favicon-32x32.png"}}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{asset "/favicon-96x96.png"}}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{asset "/favicon-16x16.png"}}">
+  <link rel="manifest" href="{{asset "/manifest.json"}}">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="{{asset "/ms-icon-144x144.png"}}">
+  <meta name="theme-color" content="#ffffff">
+  {{!-- Styles'n'Scripts --}}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/custom.css"}}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  {{!-- Ghost outputs important style and meta data with this tag --}} {{ghost_head}}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
 </head>
+
 <body class="{{body_class}} nav-closed">
 
-    {{!-- The blog navigation links --}}
-    {{navigation}}
+  {{!-- The blog navigation links --}} {{navigation}}
 
-    <div class="site-wrapper">
+  <div class="site-wrapper">
 
-        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
-        {{{body}}}
+    {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}} {{{body}}} {{!-- The tiny footer at the very bottom --}}
+    <footer class="site-footer clearfix">
+      <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+    </footer>
 
-        {{!-- The tiny footer at the very bottom --}}
-        <footer class="site-footer clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
-        </footer>
+  </div>
 
-    </div>
-
-    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    {{!-- Ghost outputs important scripts and data with this tag --}}
-    {{ghost_foot}}
-    {{!-- Fitvids makes video embeds responsive and awesome --}}
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
-    {{!-- The main JavaScript file for Casper --}}
-    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+  {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  {{!-- Localizazion of dates --}}
+  {{!-- Ghost outputs important scripts and data with this tag --}} {{ghost_foot}} {{!-- Fitvids makes video embeds responsive and awesome --}}
+  <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+  {{!-- The main JavaScript file for Casper --}}
+  <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
 
 </body>
+
 </html>
