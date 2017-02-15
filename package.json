@@ -1,8 +1,8 @@
 {
-  "name": "met",
-  "version": "1.3.3",
+    "name": "met",
+    "version": "1.3.3",
     "description": "My fork of Casper theme",
-    "version": "1.3.4",
+    "version": "1.3.5",
     "engines": {
         "ghost": ">=0.9.0 <1.0.0"
     },
