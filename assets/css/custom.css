@@ -22,6 +22,8 @@ a {
 .site-header .social_link {
   padding: 0;
   list-style-type: none;
+  position: relative;
+  z-index: 15;
 }
 
 .site-header .social_link li {
