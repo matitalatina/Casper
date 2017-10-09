@@ -16,6 +16,18 @@ a {
   color: #ff4e00;
 }
 
+.post-full-content a {
+  box-shadow: inset 0 -1px 0 #ff4e00;
+}
+
+.post-full-content a:hover {
+  color: #ff4e00;
+}
+
+.post-full-content {
+  font-family: inherit;
+}
+
 
 /* social link */
 
@@ -54,20 +66,8 @@ a {
   color: rgba(255, 78, 0, 0.8);
 }
 
-.post-full-content h1,
-.post-full-content h2,
-.post-full-content h3,
-.post-full-content h4,
-.post-full-content h5,
-.post-full-content h6,
-.post-full-content p,
 .post-full-content ul,
 .post-full-content ol,
-.post-full-content dl,
-.post-full-content pre,
-.post-full-content blockquote,
-.post-full-comments,
-.footnotes {
-    min-width: 100%;
-    max-width: 100%;
+.post-full-content pre {
+  max-width: 100%;
 }

@@ -7,7 +7,7 @@
     --green: #a4d037;
     --purple: #ad26b4;
     --yellow: #fecd35;
-    --red: #f05230;
+    --red: #ff4e00;
     --darkgrey: #15171A;
     --midgrey: #738a94;
     --lightgrey: #c5d2d9;
@@ -298,7 +298,7 @@ body {
 
 ::selection {
     text-shadow: none;
-    background: color(var(--blue) lightness(+30%));
+    background: color(var(--red) lightness(+30%));
 }
 
 hr {
@@ -411,7 +411,7 @@ blockquote cite a {
 }
 
 a {
-    color: color(var(--blue) l(-5%));
+    color: color(var(--red) l(-5%));
     text-decoration: none;
 }
 
