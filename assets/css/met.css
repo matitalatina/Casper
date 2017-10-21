@@ -1,31 +1,28 @@
+@import "screen.css";
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
 
-::selection {
-  background: #fff46d;
-  /* WebKit/Blink Browsers */
-}
-
-::-moz-selection {
-  background: #fff46d;
-  /* Gecko Browsers */
-}
-
 a {
-  color: #ff4e00;
+  color: var(--red);
 }
 
 .post-full-content a {
-  box-shadow: inset 0 -1px 0 #ff4e00;
+  box-shadow: inset 0 -1px 0 var(--red);
 }
 
 .post-full-content a:hover {
-  color: #ff4e00;
+  color: var(--red);
 }
 
 .post-full-content {
   font-family: inherit;
+}
+
+::selection {
+  text-shadow: none;
+  background: color(var(--red) lightness(+30%));
 }
 
 
